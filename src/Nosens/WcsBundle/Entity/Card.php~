@@ -139,4 +139,3 @@ class Card
         return $this->link;
     }
 }
-
