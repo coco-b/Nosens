@@ -1,0 +1,15 @@
+Nosens\WcsBundle\Entity\Categorie:
+    type: entity
+    table: null
+    repositoryClass: Nosens\WcsBundle\Repository\CategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

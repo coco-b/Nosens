@@ -1,0 +1,20 @@
+Nosens\WcsBundle\Entity\Picture:
+    type: entity
+    table: null
+    repositoryClass: Nosens\WcsBundle\Repository\PictureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        alt:
+            type: string
+            length: 255
+            nullable: true
+        src:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

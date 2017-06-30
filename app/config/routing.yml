@@ -1,3 +1,7 @@
+nosens_wcs:
+    resource: "@NosensWcsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

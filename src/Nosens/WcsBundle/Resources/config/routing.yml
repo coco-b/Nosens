@@ -1,0 +1,3 @@
+nosens_wcs_homepage:
+    path:     /
+    defaults: { _controller: NosensWcsBundle:Default:index }
