@@ -17,4 +17,17 @@ Nosens\WcsBundle\Entity\Picture:
             type: string
             length: 255
             nullable: true
-    lifecycleCallbacks: {  }
+
+
+#    lifecycleCallbacks:
+#        #Upload
+#            prePersist: [ preUpload ]
+#            postPersist: [ postUpload ]
+#
+#            #delete upload
+#            preRemove: [ preRemove ]
+#            postRemove: [ remove ]
+#
+#            #edit Upload
+#            preUpdate: [ preUpload ]
+#            postUpdate: [ postUpload ]

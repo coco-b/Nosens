@@ -7,8 +7,10 @@ namespace Nosens\WcsBundle\Entity;
  */
 class Categorie
 {
+    
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -17,11 +19,23 @@ class Categorie
      */
     private $name;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $cards;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->cards = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -50,5 +64,39 @@ class Categorie
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Add card
+     *
+     * @param \Nosens\WcsBundle\Entity\Card $card
+     *
+     * @return Categorie
+     */
+    public function addCard(\Nosens\WcsBundle\Entity\Card $card)
+    {
+        $this->cards[] = $card;
+
+        return $this;
+    }
+
+    /**
+     * Remove card
+     *
+     * @param \Nosens\WcsBundle\Entity\Card $card
+     */
+    public function removeCard(\Nosens\WcsBundle\Entity\Card $card)
+    {
+        $this->cards->removeElement($card);
+    }
+
+    /**
+     * Get cards
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCards()
+    {
+        return $this->cards;
     }
 }

@@ -12,4 +12,9 @@ Nosens\WcsBundle\Entity\Categorie:
         name:
             type: string
             length: 255
-    lifecycleCallbacks: {  }
+
+    oneToMany:
+        cards:
+            targetEntity: Nosens\WcsBundle\Entity\Card
+            mappedBy: categories
+            cascade: ['all']

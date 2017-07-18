@@ -7,8 +7,10 @@ namespace Nosens\WcsBundle\Entity;
  */
 class Card
 {
+
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -32,11 +34,16 @@ class Card
      */
     private $link;
 
+    /**
+     * @var \Nosens\WcsBundle\Entity\Categorie
+     */
+    private $categories;
+
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -137,5 +144,29 @@ class Card
     public function getLink()
     {
         return $this->link;
+    }
+
+    /**
+     * Set categories
+     *
+     * @param \Nosens\WcsBundle\Entity\Categorie $categories
+     *
+     * @return Card
+     */
+    public function setCategories(\Nosens\WcsBundle\Entity\Categorie $categories = null)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Nosens\WcsBundle\Entity\Categorie
+     */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 }
