@@ -1,0 +1,25 @@
+var containerElt = document.getElementsByClassName('container');
+var containerEltHeight = parseFloat(getComputedStyle(containerElt[0]).height);
+var delta = window.innerHeight - containerEltHeight;
+
+containerElt[0].style.marginTop = delta/2 + 'px';
+
+$('.dropdown-toggle').dropdown();
+
+$('.fixed-action-btn').openFAB();
+$('.fixed-action-btn').closeFAB();
+$('.fixed-action-btn.toolbar').openToolbar();
+$('.fixed-action-btn.toolbar').closeToolbar();
+
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+});
+
+$(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+});
+
+$(document).ready(function(){
+    $('.parallax').parallax();
+});
