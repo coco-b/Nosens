@@ -1,0 +1,58 @@
+/* 1 homepage */
+/*--------------------------------------------------*\
+    1.Homepage
+\*--------------------------------------------------*/
+/* line 5, ../sass/_homepage.scss */
+h1 {
+  color: red;
+}
+
+/*nav menu de presentation*/
+/* line 10, ../sass/_homepage.scss */
+.container_custom #conteneur-menu2 {
+  height: 300px;
+  width: 220px;
+  padding-top: 50px;
+  margin: 290px auto 0px auto;
+}
+
+/* line 17, ../sass/_homepage.scss */
+.container_custom #conteneur-menu2 ul {
+  padding: 0;
+  margin: 0;
+  margin-left: 50px;
+  float: left;
+}
+
+/* line 24, ../sass/_homepage.scss */
+.container_custom #conteneur-menu2 ul li {
+  list-style: none;
+  padding: 0px;
+}
+
+/* line 29, ../sass/_homepage.scss */
+.container_custom #conteneur-menu2 ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  padding: 4px;
+  display: block;
+  color: black;
+  background: transparent;
+  width: 230px;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  line-height: 20px;
+}
+
+/* line 45, ../sass/_homepage.scss */
+.container_custom #conteneur-menu2 ul li a:hover {
+  background: #d50000;
+  padding-left: 20px;
+  width: 200px;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
