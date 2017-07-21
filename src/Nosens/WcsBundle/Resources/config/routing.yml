@@ -1,3 +1,8 @@
 nosens_wcs_homepage:
     path:     /home
     defaults: { _controller: NosensWcsBundle:Wcs:Home }
+
+
+wcs_card_add:
+    path:     /vu
+    defaults: { _controller: NosensWcsBundle:Wcs:Wcsadd}
