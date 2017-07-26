@@ -44,7 +44,9 @@
 
 
     <div class="container">
+        {% for card in cards %}
         <div class="card">
+
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="images/office.jpg">
             </div>
@@ -56,11 +58,16 @@
                 <span class="card-title grey-text text-darken-4">{{ card.title }}<i class="material-icons right">close</i></span>
                 <p>{{ card.content|nl2br }}</p>
             </div>
+            <div>
+                <a class="waves-effect waves-light center-align btn index_btn" href=" {{ path('wcs_card_delete', {'id': card.id}) }}">delete</a>
+            </div>
+
         </div>
 
+        {% endfor %}
     </div>
 
 
-    
+
 </div>
 {% endblock %}

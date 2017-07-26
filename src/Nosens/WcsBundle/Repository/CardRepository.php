@@ -10,4 +10,5 @@ namespace Nosens\WcsBundle\Repository;
  */
 class CardRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }
