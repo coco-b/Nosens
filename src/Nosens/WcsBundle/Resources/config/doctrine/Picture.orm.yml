@@ -19,15 +19,15 @@ Nosens\WcsBundle\Entity\Picture:
             nullable: true
 
 
-#    lifecycleCallbacks:
-#        #Upload
-#            prePersist: [ preUpload ]
-#            postPersist: [ postUpload ]
-#
-#            #delete upload
-#            preRemove: [ preRemove ]
-#            postRemove: [ remove ]
-#
-#            #edit Upload
-#            preUpdate: [ preUpload ]
-#            postUpdate: [ postUpload ]
+    lifecycleCallbacks:
+        #Upload
+        prePersist: [ preUpload ]
+        postPersist: [ postUpload ]
+
+        #delete upload
+        preRemove: [ preRemove ]
+        postRemove: [ remove ]
+
+        #edit Upload
+        preUpdate: [ preUpload ]
+        postUpdate: [ postUpload ]

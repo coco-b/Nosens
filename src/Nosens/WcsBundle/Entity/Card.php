@@ -35,6 +35,11 @@ class Card
     private $link;
 
     /**
+     * @var \Nosens\WcsBundle\Entity\Picture
+     */
+    private $pictures;
+
+    /**
      * @var \Nosens\WcsBundle\Entity\Categorie
      */
     private $categories;
@@ -144,6 +149,30 @@ class Card
     public function getLink()
     {
         return $this->link;
+    }
+
+    /**
+     * Set pictures
+     *
+     * @param \Nosens\WcsBundle\Entity\Picture $pictures
+     *
+     * @return Card
+     */
+    public function setPictures(\Nosens\WcsBundle\Entity\Picture $pictures = null)
+    {
+        $this->pictures = $pictures;
+
+        return $this;
+    }
+
+    /**
+     * Get pictures
+     *
+     * @return \Nosens\WcsBundle\Entity\Picture
+     */
+    public function getPictures()
+    {
+        return $this->pictures;
     }
 
     /**

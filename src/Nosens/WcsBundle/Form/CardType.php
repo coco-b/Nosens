@@ -17,6 +17,23 @@ class CardType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        if($options ['data']->getId() == null)
+        {
+            $builder
+                ->add('pictures', PictureType::class,array(
+                   'label' => false,
+                    'required' => true
+                ));
+        }
+
+        else {
+            $builder
+                ->add('pictures', PictureType::class, array(
+                   'label' => false,
+                    'required' => false
+                ));
+        }
+
        $builder
            ->add('title', TextareaType::class)
            ->add('content',TextareaType::class)
@@ -41,7 +58,7 @@ class CardType extends AbstractType
          */
         public function getBlockPrefix()
         {
-            return 'wcsbundle_card';
+            return 'nosenswcsbundle_card';
         }
 
 }
