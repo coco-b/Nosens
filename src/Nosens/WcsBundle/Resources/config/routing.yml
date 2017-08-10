@@ -6,3 +6,10 @@ nosens_wcs_homepage:
 wcs_card_add:
     path:     /vu
     defaults: { _controller: NosensWcsBundle:Wcs:Wcsadd}
+    methods:  [GET, POST]
+
+wcs_card_delete:
+    path:     /{id}/delete
+    defaults: { _controller: NosensWcsBundle:Wcs:Wcsdelete}
+    methods:  [GET, POST]
+
