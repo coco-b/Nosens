@@ -34,6 +34,15 @@
                 <div class="row row">
                     <div class="row">
                         <div class="input-field col s6">
+                            {{ form_label (form.pictures) }}
+                            {{ form_widget (form.pictures) }}
+                            {{ form_errors (form.pictures) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row row">
+                    <div class="row">
+                        <div class="input-field col s6">
                             {{ form_label (form.link) }}
                             {{ form_widget (form.link, {'attr': {'class': 'materialize-textarea' }}) }}
                             {{ form_errors (form.link) }}
