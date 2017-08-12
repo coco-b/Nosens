@@ -31,7 +31,7 @@ Nosens\WcsBundle\Entity\Card:
 
 
     oneToOne:
-         pictures:
-             targetEntity: Nosens\WcsBundle\Entity\Picture
-             cascade: ['all']
+        picture:
+           targetEntity: Nosens\WcsBundle\Entity\Picture
+           cascade: ['all']
              

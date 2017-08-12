@@ -20,7 +20,7 @@ Nosens\WcsBundle\Entity\Picture:
 
 
     lifecycleCallbacks:
-        #Upload
+    #Upload
         prePersist: [ preUpload ]
         postPersist: [ postUpload ]
 

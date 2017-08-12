@@ -20,7 +20,7 @@ class CardType extends AbstractType
         if($options ['data']->getId() == null)
         {
             $builder
-                ->add('pictures', PictureType::class,array(
+                ->add('picture', PictureType::class,array(
                    'label' => false,
                     'required' => true
                 ));
@@ -28,7 +28,7 @@ class CardType extends AbstractType
 
         else {
             $builder
-                ->add('pictures', PictureType::class, array(
+                ->add('picture', PictureType::class, array(
                    'label' => false,
                     'required' => false
                 ));

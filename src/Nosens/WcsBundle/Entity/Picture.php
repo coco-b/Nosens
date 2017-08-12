@@ -1,6 +1,7 @@
 <?php
 
 namespace Nosens\WcsBundle\Entity;
+
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
@@ -69,7 +70,7 @@ class Picture
      */
     public function preRemove()
     {
-        $this->tempName =$this->src;
+        $this->tempName = $this->src;
     }
 
 

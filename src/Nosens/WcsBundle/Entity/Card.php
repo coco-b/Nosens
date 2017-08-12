@@ -8,7 +8,6 @@ namespace Nosens\WcsBundle\Entity;
 class Card
 {
 
-
     /**
      * @var integer
      */
@@ -37,7 +36,7 @@ class Card
     /**
      * @var \Nosens\WcsBundle\Entity\Picture
      */
-    private $pictures;
+    private $picture;
 
     /**
      * @var \Nosens\WcsBundle\Entity\Categorie
@@ -152,27 +151,27 @@ class Card
     }
 
     /**
-     * Set pictures
+     * Set picture
      *
-     * @param \Nosens\WcsBundle\Entity\Picture $pictures
+     * @param \Nosens\WcsBundle\Entity\Picture $picture
      *
      * @return Card
      */
-    public function setPictures(\Nosens\WcsBundle\Entity\Picture $pictures = null)
+    public function setPicture(\Nosens\WcsBundle\Entity\Picture $picture = null)
     {
-        $this->pictures = $pictures;
+        $this->picture = $picture;
 
         return $this;
     }
 
     /**
-     * Get pictures
+     * Get picture
      *
      * @return \Nosens\WcsBundle\Entity\Picture
      */
-    public function getPictures()
+    public function getPicture()
     {
-        return $this->pictures;
+        return $this->picture;
     }
 
     /**
