@@ -84,7 +84,7 @@ class Picture
 
     private function getUploadDir()
     {
-        return __DIR__ . '/../../../web/uploads/images/';
+        return __DIR__ . '/../../../../web/uploads/images/';
     }
 
     //generate code
