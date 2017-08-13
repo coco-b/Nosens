@@ -8,5 +8,4 @@ namespace Nosens\WcsBundle\Entity;
 class Card
 {
 
-
 }

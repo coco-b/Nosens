@@ -2,82 +2,92 @@
 
 namespace Nosens\WcsBundle\Entity;
 
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 /**
  * Picture
  */
 class Picture
 {
-    /**
-     * @var int
-     */
-    private $id;
+    private $tempName;
 
-    /**
-     * @var string
-     */
-    private $alt;
+    private $file;
 
-    /**
-     * @var string
-     */
-    private $src;
 
 
     /**
-     * Get id
-     *
-     * @return int
+     * @param mixed $file
      */
-    public function getId()
+    public function setFile(UploadedFile $file)
     {
-        return $this->id;
+        if($this->src != null)
+        {
+            $this->tempName = $this->src;
+
+            $this->url=null;
+            $this->alt=null;
+        }
+
+        $this->file = $file;
     }
 
     /**
-     * Set alt
-     *
-     * @param string $alt
-     *
-     * @return Picture
+     *@return mixed
      */
-    public function setAlt($alt)
+    public function getFile()
     {
-        $this->alt = $alt;
+        return $this->file;
+    }
 
-        return $this;
+    public function preUpload()
+    {
+        if($this->file === null){
+            return;
+        }
+
+        if($this->tempName != null)
+        {
+            unlink($this->getUploadDir() . $this->tempName);
+        }
+
+        $this->src = uniqid() . '.' . $this->file->guessExtension();
+        $this->alt = $this->file->getClientOriginalName();
     }
 
     /**
-     * Get alt
-     *
-     * @return string
+     * @ORM\PostPersist
      */
-    public function getAlt()
+    public function postUpload()
     {
-        return $this->alt;
+        if($this->file === null)
+        {
+            return ;
+        }
+        $this->file->move($this->getUploadDir(), $this->src);
     }
+    /**
+     * @ORM\PreRemove
+     */
+    public function preRemove()
+    {
+        $this->tempName = $this->src;
+    }
+
 
     /**
-     * Set src
-     *
-     * @param string $src
-     *
-     * @return Picture
+     * @ORM\PostRemove
      */
-    public function setSrc($src)
+    public function remove()
     {
-        $this->src = $src;
-
-        return $this;
+        unlink($this->getUploadDir() . $this->src);
     }
 
-    /**
-     * Get src
-     *
-     * @return string
-     */
-    public function getSrc()
+    private function getUploadDir()
     {
-        return $this->src;
+        return __DIR__ . '/../../../web/uploads/images/';
     }
+
+    //generate code
+
+
 }

@@ -8,7 +8,6 @@ namespace Nosens\WcsBundle\Entity;
 class Card
 {
 
-
     /**
      * @var integer
      */
@@ -33,6 +32,11 @@ class Card
      * @var string
      */
     private $link;
+
+    /**
+     * @var \Nosens\WcsBundle\Entity\Picture
+     */
+    private $picture;
 
     /**
      * @var \Nosens\WcsBundle\Entity\Categorie
@@ -144,6 +148,30 @@ class Card
     public function getLink()
     {
         return $this->link;
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Nosens\WcsBundle\Entity\Picture $picture
+     *
+     * @return Card
+     */
+    public function setPicture(\Nosens\WcsBundle\Entity\Picture $picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Nosens\WcsBundle\Entity\Picture
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 
     /**

@@ -30,7 +30,8 @@ Nosens\WcsBundle\Entity\Card:
             inversedBy: cards
 
 
-#    oneToOne:
-#         picture:
-#             targetEntity: WcsBundle\Entity\Picture
-#             cascade: ['all']
+    oneToOne:
+        picture:
+           targetEntity: Nosens\WcsBundle\Entity\Picture
+           cascade: ['all']
+             
