@@ -1,4 +1,4 @@
-
+/* 1 homepage */
 /*--------------------------------------------------*\
     1.Homepage
 \*--------------------------------------------------*/
@@ -7,8 +7,13 @@ h1 {
   color: red;
 }
 
+/* line 8, ../sass/_homepage.scss */
+body {
+  background: url("http://www.bilbaoclick.com/wp-content/uploads/2015/10/paisajes-de-Alex-Katz-en-bilbao.jpg") no-repeat fixed center;
+}
+
 /*nav menu de presentation*/
-/* line 10, ../sass/_homepage.scss */
+/* line 14, ../sass/_homepage.scss */
 .container_custom #conteneur-menu2 {
   height: 300px;
   width: 220px;
@@ -16,7 +21,7 @@ h1 {
   margin: 290px auto 0px auto;
 }
 
-/* line 17, ../sass/_homepage.scss */
+/* line 21, ../sass/_homepage.scss */
 .container_custom #conteneur-menu2 ul {
   padding: 0;
   margin: 0;
@@ -24,13 +29,13 @@ h1 {
   float: left;
 }
 
-/* line 24, ../sass/_homepage.scss */
+/* line 28, ../sass/_homepage.scss */
 .container_custom #conteneur-menu2 ul li {
   list-style: none;
   padding: 0px;
 }
 
-/* line 29, ../sass/_homepage.scss */
+/* line 33, ../sass/_homepage.scss */
 .container_custom #conteneur-menu2 ul li a {
   text-decoration: none;
   font-size: 25px;
@@ -46,7 +51,7 @@ h1 {
   line-height: 20px;
 }
 
-/* line 45, ../sass/_homepage.scss */
+/* line 49, ../sass/_homepage.scss */
 .container_custom #conteneur-menu2 ul li a:hover {
   background: #d50000;
   padding-left: 20px;

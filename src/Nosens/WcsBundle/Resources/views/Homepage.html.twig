@@ -1,15 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block nav %}
-<div class='container container_custom'>
-    <div id="conteneur-menu2">
-        <ul>
+<div id="home">
+    <div class='container container_custom'>
+        <div id="conteneur-menu2">
+            <ul>
 
-            <li><a href="formation.php">Formation</a></li>
-            <li><a href="projet.php">Projets</a></li>
-            <li><a href="parcours.php">Parcours</a></li>
+                <li><a href="{{ path('wcs_card_add') }}">Vu</a></li>
+                <li><a href="projet.php">Projets</a></li>
+                <li><a href="parcours.php">Parcours</a></li>
 
-        </ul>
+            </ul>
+        </div>
     </div>
+</div>
 {% endblock %}
 
