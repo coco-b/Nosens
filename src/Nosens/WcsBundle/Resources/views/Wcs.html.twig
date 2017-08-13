@@ -58,33 +58,35 @@
 
     <div class="container">
         {% for card in cards %}
+            <div class="row">
+                <div class="col s12 m6 l6">
         <div class="card">
 
-            <div class="card-image waves-effect waves-block waves-light">
-                {#<div class="card_picture" style="background-image: url(''); background-size:cover; background-position:center">#}
-                    {#<span class="text_card_picture big_text_card_picture activator">Cliquez</span>#}
-                    {#<span class="text_card_picture medium_text_card_picture activator">Pour plus d'infos</span>#}
-                {#</div>#}
+                    <div class="card-image waves-effect waves-block waves-light">
+                        {#<div class="card_picture" style="background-image: url(''); background-size:cover; background-position:center">#}
+                        {#<span class="text_card_picture big_text_card_picture activator">Cliquez</span>#}
+                        {#<span class="text_card_picture medium_text_card_picture activator">Pour plus d'infos</span>#}
+                        {#</div>#}
 
-                {% if card.picture is empty %}
-                    {% else %}
-                <img src="{{ asset('uploads/images/' ~ card.picture.src) }}">
+                        {% if card.picture is empty %}
+                        {% else %}
+                            <img src="{{ asset('uploads/images/' ~ card.picture.src) }}">
                         {% endif %}
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ card.title }}<i class="material-icons right">more_vert</i></span>
+                        <p><a href="#">{{ card.link }}</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ card.title }}<i class="material-icons right">close</i></span>
+                        <p>{{ card.content|nl2br }}</p>
+                    </div>
+                    <div>
+                        <a class="waves-effect waves-light center-align btn index_btn" href=" {{ path('wcs_card_delete', {'id': card.id}) }}">delete</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{ card.title }}<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">{{ card.link }}</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{ card.title }}<i class="material-icons right">close</i></span>
-                <p>{{ card.content|nl2br }}</p>
-            </div>
-            <div>
-                <a class="waves-effect waves-light center-align btn index_btn" href=" {{ path('wcs_card_delete', {'id': card.id}) }}">delete</a>
-            </div>
-
         </div>
-
         {% endfor %}
     </div>
 
