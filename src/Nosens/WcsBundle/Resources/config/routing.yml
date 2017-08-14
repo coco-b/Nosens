@@ -13,3 +13,6 @@ wcs_card_delete:
     defaults: { _controller: NosensWcsBundle:Wcs:Wcsdelete}
     methods:  [GET, POST]
 
+nosens_exo:
+    path:      /exo
+    defaults: { _controller: NosensWcsBundle:Exo:Exo}
