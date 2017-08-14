@@ -2,14 +2,7 @@
 
 
 {% block body %}
-    <div class="navbar">
-        <ul id="dropdown2" class="dropdown-content">
-            <li><a href="#">youHou<span class="badge">plop</span></a></li>
-            <li><a href="#">veille<span class="new badge">plip</span></a></li>
-            <li><a href="#">JOB</a></li>
-        </ul>
-    <a class="btn dropdown-button" href="#!" data-activates="dropdown2">menu<i class="material-icons right">arrow_drop_down</i></a>
-    </div>
+    {% include 'layout.html.twig' %}
 
     <div id="card">
     <div class="parallax-container">
@@ -68,6 +61,7 @@
 
     <div class="container">
         {% for card in cards %}
+            {% set i = i + 1 %}
             <div class="row">
                 <div class="col s12 m6 l6 ">
         <div class="card z-depth-5">
@@ -97,6 +91,7 @@
                 </div>
             </div>
         </div>
+
         {% endfor %}
     </div>
 

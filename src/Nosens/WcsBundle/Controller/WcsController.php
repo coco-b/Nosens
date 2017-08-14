@@ -29,6 +29,8 @@ class WcsController extends Controller
      */
     public function WcsaddAction(Request $request)
     {
+        $i = 0;
+
         $em = $this->getDoctrine()->getManager();
         $cards = $em ->getRepository(Card::class)->findAll();
 
@@ -46,6 +48,7 @@ class WcsController extends Controller
         }
 
         return $this->render('@NosensWcs/Wcs.html.twig', array(
+                'i' => $i,
                 'card' => $card,
                 'cards' => $cards,
                 'form' => $form->createView(),
